@@ -26,7 +26,6 @@ func main() {
     var input = strings.Split(string(file), ",")
     var numbers = make([]int, 0, len(input)) // Set capacity
     var sum int = 0
-    var max int = 0
 
     // Cast input values to integers
     for _, value := range input {
@@ -35,9 +34,6 @@ func main() {
             fmt.Println(err)
         }
         numbers = append(numbers, i)
-        if max < i {
-            max = i
-        }
         sum += i
     }
 
